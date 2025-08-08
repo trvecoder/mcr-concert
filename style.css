@@ -93,7 +93,7 @@ body {
   font-size: 10px;
   bottom: 150px; 
   overflow-y: scroll;
-  border:3px solid rgb(71, 52, 86,0.2);
+  border:0px solid rgb(71, 52, 86,0.2);
   border-radius: 20px;
 }
   
@@ -108,7 +108,7 @@ body {
 #trackMenu h2 {
   font-size: 15px;
   color: #fff;
-  padding-bottom: 5px;
+  border-bottom: 0px dashed rgba(255, 255, 255, 0.5);
   text-align: center;
   background: linear-gradient(#473456, #3E2B4F);
   padding: 15px;
@@ -139,6 +139,9 @@ body {
 }
 #trackMenu li:not(:last-child) {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+}
+#trackMenu li:first-child{
+  border-top:  1px dashed rgba(255, 255, 255, 0.5);
 }
 
 ::-webkit-scrollbar {
