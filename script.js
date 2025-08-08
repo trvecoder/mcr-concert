@@ -5,16 +5,8 @@ let currentLine = 0;
 let lyricsInterval;
 let selectedTrack = null;
 let isEnded = false;
-typeLine(`click on da play button gng`);
-const intromap={
-  "msg":[
-    { time: 0.39, text: "happy birthday u fag" },
-    { time: 3.39, text: "welcome 2 concerts4fineshyts" },
-    { time: 6.39, text: "ash says hi btw imagine dating ts loser"},
-    { time: 9.39, text: "wtv makes u happy ig" },
-    { time: 12.39, text: "choose a track from da tracklist to start" }
-  ]
-}
+typeLine(`happy birthday Leia. select a track to start :3`);
+
 const lyricsMap = {
   "Helena": [
     { time: 0.39, text: "Long ago" },
@@ -366,22 +358,7 @@ function startLyricSync() {
   }, 200);
 }
 
-function startIntroSync() {
-  const messages = intromap["msg"];
-  clearInterval(lyricsInterval); // cancel previous interval
-  currentLine = 0;
 
-  lyricsInterval = setInterval(() => {
-    const currentTime = audio.currentTime;
-    if (currentLine < messages.length && currentTime >= messages[currentLine].time) {
-      typeLine(messages[currentLine].text);
-      currentLine++;
-    }
-    if (currentLine >= messages.length) {
-      clearInterval(lyricsInterval);
-    }
-  }, 100);
-}
 
 function updatePlayButtonIcon() {
   const btn = document.getElementById("playButton");
@@ -397,30 +374,7 @@ function updatePlayButtonIcon() {
 
 function startConcert() {
   if (!selectedTrack) {
-    
-      // Stop any existing intervals or audio
-      clearInterval(lyricsInterval);
-      if (audio) {
-        audio.pause();
-        audio = null;
-      }
-
-      isPlaying = true;
-      isPaused = false;
-      isEnded = false;
-      updatePlayButtonIcon();
-
-      const messages = intromap["msg"];
-      currentLine = 0;
-
-      // Display messages based on their `time` field using setTimeout
-      messages.forEach((msg, index) => {
-        setTimeout(() => {
-          if (!isPaused) typeLine(msg.text);
-        }, msg.time * 1000); // Convert seconds to ms
-      });
-
-    
+    btn.src = "assets/pause.png";
   };
 
   if (isPaused && audio) {
