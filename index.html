@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>MCR 8-bit Concert</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="stage">
+      <h1>concerts4fineshyts</h1>
+      <img 
+        src="assets/play.png" 
+        alt="Start Button" 
+        id="playButton" 
+        class="play-button"
+        onclick="startConcert()" 
+      />
+    </div>
+    <div class="gerard"></div>
+    <div id="trackMenu">
+      <h2 >TRACKLIST</h2>
+      <ul>
+        <li onclick="chooseTrack('Helena')">track 1: Helena</li>
+        <li onclick="chooseTrack('This Is How I Disappear')">track 2: This Is How I Disappear</li>
+        <li onclick="chooseTrack('I\'m Not Okay (I Promise)')">track 3: I'm Not Okay (I Promise)</li>
+        <li onclick="chooseTrack('The Ghost of You')">track 4: The Ghost of You</li>
+        <li onclick="chooseTrack('Disenchanted')">track 5: Disenchanted</li>
+        <li onclick="chooseTrack('The Sharpest Lives')">track 6: The Sharpest Lives</li>
+        <li onclick="chooseTrack('To The End')">track 7: To The End.</li>
+        <li onclick="chooseTrack('The Jetset Life Is Gonna Kill You')">track 8: The Jetset Life Is Gonna Kill You</li>
+        <li onclick="chooseTrack('To The End')">track 7: To The End.</li>
+        <li onclick="chooseTrack('To The End')">track 7: To The End.</li>
+        <li onclick="chooseTrack('To The End')">track 7: To The End.</li>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+        <!-- Add more songs here -->
+      </ul>
+    </div>
+    <div id="lyricsBox">
+      <img id="sprite" src="assets/gerardway.png" alt="Gerard Sprite" />
+      <div id="textBox">
+        <div id="speakerName">Gerard Way (real):</div>
+        <div id="lyricsText"></div> 
+      </div>
+    </div>
 
-<body>
-  Hello world
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
