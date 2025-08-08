@@ -1,4 +1,157 @@
-html {
-  height: 100%;
-  width: 100%;
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  justify-items: center;
 }
+
+#stage {
+  padding-top: 50px;
+  color: #fff;
+}
+.play-button {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    left: 760px; /* Moves the button 20px to the right from its normal spot */
+    top: 150px;
+    cursor: pointer;
+  }
+
+
+
+
+#lyricsBox {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: linear-gradient( #0f032b,#030109);
+  border:2px solid rgba(223,184, 225,0.2);
+  border-radius: 1px;
+  display: flex;
+  align-items: flex-start;
+  padding: 19px;
+  font-family: 'Press Start 2P', monospace;
+  color: #68496e;
+  box-sizing: border-box;
+  max-width: 90%;
+  gap: 12px;
+}
+
+#sprite {
+  top:6px;
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+}
+
+#textBox {
+  display: flex;
+  flex-direction: column;
+  
+  font-size: 12px;
+  line-height: 1.4;
+  min-height: 64px;
+  text-align: left;
+}
+
+#speakerName {
+  font-weight: bold;
+  color: #fff;
+}
+
+#lyricsText {
+  white-space: pre-wrap;
+  color: #ecd8fd;
+  padding-top: 16px;
+}
+#startButton:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+#startButton{
+  padding-top: 7%;
+  right: 9px;
+}
+#trackMenu {
+  position: fixed;
+  top: 54px;
+  left: 20px;
+  width: 250px;
+  background: linear-gradient(#473456, #0f032b);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: #4dff00;
+  bottom: 140px; 
+  overflow-y: scroll;
+  border-top:3px solid rgb(71, 52, 86,0.2);
+  border-left:3px solid rgb(71, 52, 86,0.2);
+  border-right:3px solid rgb(71, 52, 86,0.2) ;
+}
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  #trackMenu::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #trackMenu {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+#trackMenu2{
+  padding: 2px;
+}
+.lyric-line {
+  font-size: 18px;
+  color: white;
+  padding: 4px 0;
+  transition: opacity 1s ease;
+}
+
+
+#trackMenu h2 {
+  font-size: 15px;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+#trackMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#stage{
+  padding-top:60px ;
+}
+#trackMenu li {
+  cursor: pointer;
+  padding: 10px 0;
+  color: #ecd8fd;
+  padding-left: 15px;
+  padding-right: 3px;
+  font-size: 10px;
+  line-height: 2.5;   
+  text-align: left;
+}
+
+#trackMenu li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#trackMenu li:not(:last-child) {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 600px) {
+  #trackMenu {
+    font-size: 7px;
+    width: 140px;
+    bottom: 110px;
+  }
+}
+
+
