@@ -464,4 +464,3 @@ function chooseTrack(trackName) {
   typeLine(`> Selected: ${trackName}`);
   startConcert();
 }
-
