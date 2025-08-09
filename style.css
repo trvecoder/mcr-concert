@@ -1,4 +1,205 @@
-html {
-  height: 100%;
-  width: 100%;
+body {
+  background-color: #0d0d0d;
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  justify-items: center;
+  
+}
+.gerard {
+  width:300px;
+  height:300px;
+  background-image: url('assets/gerard.png'); /* 👈 Replace with your file path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 40%;
+}
+.ray {
+  width:300px;
+  height:300px;
+  background-image: url('assets/raytoro.png'); /* 👈 Replace with your file path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 33%;
+  position: absolute;
+  
+}
+.mikey {
+  background-image: url('assets/mikey.png'); /* 👈 Replace with your file path */
+  
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 26%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.matt {
+  width:300px;
+  height:300px;
+  background-image: url('assets/matt.png'); /* 👈 Replace with your file path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 47%;
+}
+.frank {
+  width:300px;
+  height:300px;
+  background-image: url('assets/frankiero.png'); /* 👈 Replace with your file path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 54%;
+}
+.mikey:hover{
+  background-image: url('assets/mikeyhover.png');
+}
+
+#stage {
+  padding-top: 50px;
+  color: #fff;
+}
+.play-button {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    left: 760px; 
+    top: 150px;
+    cursor: pointer;
+  }
+  
+#lyricsBox {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: linear-gradient( #0f032b,#030109);
+  border:2px solid rgba(223,184, 225,0.2);
+  border-radius: 1px;
+  display: flex;
+  align-items: flex-start;
+  padding: 19px;
+  font-family: 'Press Start 2P', monospace;
+  color: #68496e;
+  box-sizing: border-box;
+  max-width: 90%;
+  gap: 12px;
+}
+
+#sprite {
+  top:6px;
+  width: 64px;
+  height: 64px;
+}
+
+#textBox {
+  display: flex;
+  flex-direction: column;
+  
+  font-size: 12px;
+  line-height: 1.4;
+  min-height: 64px;
+  text-align: left;
+}
+
+#speakerName {
+  font-weight: bold;
+  color: #fff;
+}
+
+#lyricsText {
+  white-space: pre-wrap;
+  color: #ecd8fd;
+  padding-top: 16px;
+}
+#startButton:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+#startButton{
+  padding-top: 7%;
+  right: 9px;
+}
+#trackMenu {
+  position: fixed;
+  top: 54px;
+  left: 20px;
+  width: 250px;
+  background: linear-gradient(#473456, #0f032b);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  bottom: 150px; 
+  overflow-y: scroll;
+  border:0px solid rgb(71, 52, 86,0.2);
+  border-radius: 20px;
+}
+  
+.lyric-line {
+  font-size: 18px;
+  color: white;
+  padding: 4px 0;
+  transition: opacity 1s ease;
+}
+
+
+#trackMenu h2 {
+  font-size: 15px;
+  color: #fff;
+  border-bottom: 0px dashed rgba(255, 255, 255, 0.5);
+  text-align: center;
+  background: linear-gradient(#473456, #3E2B4F);
+  padding: 15px;
+  position: sticky; top: 0;
+}
+
+#trackMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#stage{
+  padding-top:60px ;
+}
+#trackMenu li {
+  cursor: pointer;
+  padding: 10px 0;
+  color: #ecd8fd;
+  padding-left: 15px;
+  padding-right: 7px;
+  font-size: 10px;
+  line-height: 2.5;   
+  text-align: left;
+}
+
+#trackMenu li:hover {
+  background-color: rgba(255, 255, 255, 0.095);
+}
+#trackMenu li:not(:last-child) {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+}
+#trackMenu li:first-child{
+  border-top:  1px dashed rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6a696a00; 
 }
