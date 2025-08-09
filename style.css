@@ -3,6 +3,64 @@ body {
   color: white;
   font-family: 'Press Start 2P', monospace;
   justify-items: center;
+  
+}
+.gerard {
+  width:300px;
+  height:300px;
+  background-image: url('assets/gerard.png'); /* 👈 Replace with your file path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 40%;
+}
+.ray {
+  width:300px;
+  height:300px;
+  background-image: url('assets/raytoro.png'); /* 👈 Replace with your file path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 33%;
+  position: absolute;
+  
+}
+.mikey {
+  background-image: url('assets/mikey.png'); /* 👈 Replace with your file path */
+  
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 26%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.matt {
+  width:300px;
+  height:300px;
+  background-image: url('assets/matt.png'); /* 👈 Replace with your file path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 47%;
+}
+.frank {
+  width:300px;
+  height:300px;
+  background-image: url('assets/frankiero.png'); /* 👈 Replace with your file path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 54%;
+}
+.mikey:hover{
+  background-image: url('assets/mikeyhover.png');
 }
 
 #stage {
@@ -127,12 +185,21 @@ body {
 #trackMenu li:not(:last-child) {
   border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
 }
-@media (max-width: 600px) {
-  #trackMenu {
-    font-size: 7px;
-    width: 140px;
-    bottom: 110px;
-  }
+#trackMenu li:first-child{
+  border-top:  1px dashed rgba(255, 255, 255, 0.5);
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6a696a00; 
+}
